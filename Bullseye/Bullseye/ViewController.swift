@@ -41,8 +41,12 @@ class ViewController: UIViewController {
     
     @IBAction func showAlert(){
         
+        var difference: Int = abs(currentValue - targetValue)
+
+
+        
         let message = "The Value of the slider is: \(currentValue)" +
-        "\n The target value is: \(targetValue)"
+        "\n The target value is: \(targetValue)" + "\n The difference is \(difference)"
         
         
 //      Creates Alert Modal
