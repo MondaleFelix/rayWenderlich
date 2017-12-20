@@ -21,12 +21,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showAlert(){
+        
+//      Creates Alert Modal
         let alert = UIAlertController(title: "Hello World", message: "This is my first alert", preferredStyle: .alert)
         
+//      Creates the dissmiss button
         let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
     
+//      Adds the dissmiss button to the Alert Modale
         alert.addAction(action)
         
+//      Shows alert when user presses button
         present(alert, animated: true, completion: nil)
     }
 
