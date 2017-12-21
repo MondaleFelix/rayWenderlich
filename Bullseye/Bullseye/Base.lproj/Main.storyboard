@@ -76,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ft-hZ-6qL">
-                                <rect key="frame" x="241" y="247" width="21" height="21"/>
+                                <rect key="frame" x="241" y="247" width="74" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -103,6 +103,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="scoreLabel" destination="6ft-hZ-6qL" id="bW5-ue-wst"/>
                         <outlet property="slider" destination="mdd-2w-XJJ" id="yUL-rP-DU7"/>
                         <outlet property="targetValueLabel" destination="ZRn-Rs-Xps" id="CW1-ce-cTu"/>
                     </connections>

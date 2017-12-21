@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     var targetValue: Int = 0
     @IBOutlet weak var targetValueLabel: UILabel!
+    var score = 0
+    
+    @IBOutlet weak var scoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +25,7 @@ class ViewController: UIViewController {
     }
 
     func startNewRounds() {
+        scoreLabel.text = String(score)
         targetValue = 1 + Int(arc4random_uniform(100))
         currentValue = 50
         slider.value = Float(currentValue)
@@ -44,6 +48,7 @@ class ViewController: UIViewController {
         let difference: Int = abs(currentValue - targetValue)
         let points = 100 - difference
 
+        score += points
         
         let message = "The Value of the slider is: \(currentValue)" +
         "\n The target value is: \(targetValue)" + "\n The difference is \(difference) " +
