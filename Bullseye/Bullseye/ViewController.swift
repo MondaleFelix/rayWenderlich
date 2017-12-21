@@ -15,8 +15,9 @@ class ViewController: UIViewController {
     var targetValue: Int = 0
     @IBOutlet weak var targetValueLabel: UILabel!
     var score = 0
-    
     @IBOutlet weak var scoreLabel: UILabel!
+    var roundNumber = 0
+    @IBOutlet weak var roundNumberLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
     }
 
     func startNewRounds() {
+        roundNumberLabel.text = String(roundNumber)
+        roundNumber += 1 
         scoreLabel.text = String(score)
         targetValue = 1 + Int(arc4random_uniform(100))
         currentValue = 50
