@@ -25,13 +25,15 @@ class ChecklistViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//      returns a cell that is found by row address and adds/removes checkmark 
+        //returns a cell that is found by row address and adds/removes checkmark
         if let cell = tableView.cellForRow(at: indexPath){
             if cell.accessoryType == .none{
                 cell.accessoryType = .checkmark
             } else {
                 cell.accessoryType = .none
             }
+        //deselects row after uses presses
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     
