@@ -114,5 +114,18 @@ class ChecklistViewController: UITableViewController {
         }
     }
     
+    @IBAction func addItem(_ sender: Any) {
+        let newRowIndex = items.count
+        let item = ChecklistItem()
+        item.text = "I am an new row"
+        item.checked = false
+        
+        items.append(item)
+
+//      address to where new row will be inserted
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+    }
 }
 
