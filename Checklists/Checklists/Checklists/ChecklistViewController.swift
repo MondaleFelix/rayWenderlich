@@ -116,6 +116,14 @@ class ChecklistViewController: UITableViewController {
     
 //  adds new item in the checklist, currently value is being hardcoded
     @IBAction func addItem(_ sender: Any) {
+
+    /*
+         To add a new row in the checklist we must:
+         1) Create a new checklistItem
+         2) Initialize a value
+         3) Insert row into Tableview at given address
+                                                        */
+        
         let newRowIndex = items.count
         let item = ChecklistItem()
         item.text = "I am an new row"
