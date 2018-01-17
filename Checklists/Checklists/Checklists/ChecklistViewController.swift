@@ -114,6 +114,7 @@ class ChecklistViewController: UITableViewController {
         }
     }
     
+//  adds new item in the checklist, currently value is being hardcoded
     @IBAction func addItem(_ sender: Any) {
         let newRowIndex = items.count
         let item = ChecklistItem()
@@ -124,6 +125,7 @@ class ChecklistViewController: UITableViewController {
 
 //      address to where new row will be inserted
         let indexPath = IndexPath(row: newRowIndex, section: 0)
+//      Tableview is expecting multiple row so it must be in an array
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
     }
