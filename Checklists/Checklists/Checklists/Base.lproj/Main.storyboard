@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="281.25" y="113.02816901408451"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Title-->
         <scene sceneID="1Vb-Qu-Q7k">
             <objects>
-                <tableViewController id="Zae-jx-jpt" sceneMemberID="viewController">
+                <tableViewController id="Zae-jx-jpt" customClass="AddItemViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aic-Ko-4Iw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,6 +76,18 @@
                             <outlet property="delegate" destination="Zae-jx-jpt" id="h91-X0-j77"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="7vj-xY-MAd">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="HBh-CE-TCl">
+                            <connections>
+                                <action selector="cancel:" destination="Zae-jx-jpt" id="xcs-6J-Qbx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="obU-TR-TEB">
+                            <connections>
+                                <action selector="done:" destination="Zae-jx-jpt" id="Mpy-9i-S7Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqs-LS-7HL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
