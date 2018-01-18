@@ -14,10 +14,14 @@ class AddItemViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//      removes large title display 
+//      removes large title display
         navigationItem.largeTitleDisplayMode = .never
     }
 
+//  Sets text field to be first responder so keyboard will appear
+    override func viewWillAppear(_ animated: Bool) {
+        textField.becomeFirstResponder()
+    }
     
     @IBAction func cancel(_ sender: Any) {
         navigationController?.popViewController(animated: true)
