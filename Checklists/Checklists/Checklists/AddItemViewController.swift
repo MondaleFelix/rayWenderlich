@@ -14,6 +14,7 @@ class AddItemViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//      removes large title display 
         navigationItem.largeTitleDisplayMode = .never
     }
 
@@ -27,7 +28,8 @@ class AddItemViewController: UITableViewController {
         navigationController?.popViewController(animated: true)
     }
     
+//  Does not allow user to select the cell, when pressing for text field
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        return nil 
+        return nil
     }
 }
