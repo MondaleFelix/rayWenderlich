@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddItemViewController: UITableViewController {
+class AddItemViewController: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textField: UITextField!
     
@@ -16,6 +16,10 @@ class AddItemViewController: UITableViewController {
         super.viewDidLoad()
 //      removes large title display
         navigationItem.largeTitleDisplayMode = .never
+        
+//      sets the delegate so we can access the text field
+        textField.delegate = self
+        
     }
 
 //  Sets text field to be first responder so keyboard will appear
