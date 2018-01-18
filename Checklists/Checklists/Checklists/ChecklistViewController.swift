@@ -126,8 +126,10 @@ class ChecklistViewController: UITableViewController {
         
         let newRowIndex = items.count
         let item = ChecklistItem()
-        item.text = "I am an new row"
-        item.checked = false
+        let titles = ["Eat one fruit", "Eat two fruits", "Eat three fruits", "Eat four fruits","Eat five fruits"]
+        var randomIndex = Int(arc4random_uniform(UInt32(titles.count)))
+        item.text = titles[randomIndex]
+        item.checked = true
         
         items.append(item)
 
